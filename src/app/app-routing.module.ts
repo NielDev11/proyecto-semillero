@@ -8,20 +8,24 @@ import { LoginComponent } from './component/auth/login/login.component';
 import { RegisterComponent } from './component/register/register.component';
 import { ModuloNivelComponent } from './modulos/modulo-nivel/modulo-nivel.component';
 import { ModuloCargoComponent } from './modulos/modulo-cargo/modulo-cargo.component';
-import { ModuloTipoEvaluacionComponent } from './modulos/modulo-tipo-evaluacion/modulo-tipo-evaluacion.component'; 
+import { ModuloTipoEvaluacionComponent } from './modulos/modulo-tipo-evaluacion/modulo-tipo-evaluacion.component';
+import { ModuloComportamientoComponent } from './modulos/modulo-comportamiento/modulo-comportamiento.component';
+import { ModuloCompetenciaComponent } from './modulos/modulo-competencia/modulo-competencia.component';
 
 
 
 const routes: Routes = [
-  {path:'',redirectTo: '/login', pathMatch: 'full'},
-  {path:'principal',component:CardComponent},
-  {path:'table',component:TableComponent},
-  {path:'login',component:LoginComponent, data: {title: "Inicio de sessión"}},
-  {path:'menubar',component:MenubarComponent},
-  {path:'register',component:RegisterComponent},
-  {path:'modulo_nivel',component:ModuloNivelComponent},
-  {path:'modulo_cargo',component:ModuloCargoComponent},
-  {path:'modulo_tipoevaluacion',component:ModuloTipoEvaluacionComponent},
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
+  { path: 'principal', component: CardComponent },
+  { path: 'table', component: TableComponent },
+  { path: 'login', component: LoginComponent, data: { title: "Inicio de sessión" } },
+  { path: 'menubar', component: MenubarComponent },
+  { path: 'register', component: RegisterComponent },
+  { path: 'modulo_nivel', component: ModuloNivelComponent },
+  { path: 'modulo_cargo', component: ModuloCargoComponent },
+  { path: 'modulo_tipoevaluacion', component: ModuloTipoEvaluacionComponent },
+  { path: 'modulo_competencia', component: ModuloCompetenciaComponent },
+  { path: 'modulo_comportamiento', component: ModuloComportamientoComponent },
   { path: '**', redirectTo: '/login' }
 ];
 

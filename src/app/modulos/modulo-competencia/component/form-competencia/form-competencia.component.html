@@ -1,0 +1,30 @@
+<form [formGroup]="myform" (ngSubmit)="saveCompetencia()">
+    <h1 class="dialog-title">{{inputdata.title}}</h1>
+
+    <div class="mat-dialog-content">
+        <div class="row">
+            <div class="form-group input-group">
+                <mat-icon class="icon">label_important</mat-icon>
+                <input formControlName="nombre" placeholder="Nombre" matInput>
+                <div *ngIf="submit && f['nombre'].errors" class="invalid-feedback">
+                    <div *ngIf="f['nombre'].errors['required']">El campo nombre es requerido</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group input-group">
+                <mat-icon class="icon">label_important</mat-icon>
+                <textarea formControlName="descripcion" placeholder="Descripción" matInput></textarea>
+                <div *ngIf="submit && f['descripcion'].errors" class="invalid-feedback">
+                    <div *ngIf="f['descripcion'].errors['required']">La descripción es requerida.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mat-dialog-actions button-container">
+        <button mat-raised-button type="submit" color="primary" class="btn-primary">Guardar</button>
+        <a (click)="closepopup()" mat-raised-button color="warn" class="btn-secondary">Cerrar</a>
+    </div>
+</form>

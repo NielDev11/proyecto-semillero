@@ -1,0 +1,27 @@
+mat-card {
+    margin: 2%;
+}
+
+.action button {
+    margin: 11px 5px 11px 5px;
+}
+
+.action {
+    display: inline-block;
+    width: auto;
+    margin: auto;
+    text-align: left;
+}
+
+th {
+    background-color: black !important;
+    color: white;
+}
+
+.activo {
+    color: green;
+}
+
+.inactivo {
+    color: rgba(128, 128, 128, 0.716);
+}
